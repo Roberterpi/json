@@ -7,10 +7,11 @@
   <title>Document</title>
 </head>
 <body>
+  <ul id="people"></ul>
   <script>
     let person = {
       name: "Brad",
-      age: 35
+      age: 35,
       // email: function(){
       //   return 'brad@gmail.com';
       // }
@@ -40,11 +41,12 @@
     ]
 
     //console.log(people[1]);
-
+    let output = "";
     for (let i = 0;i < people.length;i++) {
-      console.log(people[i].name);
+      //console.log(people[i].name);
+      output += '<li>'+people[i].name+'</li>';
     }
-
+    document.getElementById("people").innerHTML = output;
 
   </script>
 </body>
